@@ -14,3 +14,7 @@ mkdir -p /certs/$SERVER_DOMAIN
 cd /certs/$SERVER_DOMAIN
 mkcert -cert-file cert.pem -key-file privkey.pem "$SERVER_DOMAIN" "mtls.$SERVER_DOMAIN" "*.$SERVER_DOMAIN"
 cat cert.pem $CAROOT/rootCA.pem >fullchain.pem
+if [ -d "/ca_public" ]
+then
+  cp $CAROOT/rootCA.pem /ca_public/mkcert_ca.pem
+fi
