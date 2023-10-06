@@ -3,6 +3,12 @@ mkcert Submodule
 
 This submodule contains a script for generating SSL/TLS certificates using the `mkcert` tool.
 
+Superceded by miniwerk
+----------------------
+
+https://github.com/pvarki/python-rasenmaeher-miniwerk now handles what we used to and does it better.
+
+
 Usage in docker-compose-local.yml
 ---------------------------------
 
